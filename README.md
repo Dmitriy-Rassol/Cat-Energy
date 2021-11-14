@@ -1,4 +1,4 @@
-# [Личный проект «Кэт энерджи»](https://dmitriy-rassol.github.io/Cat-Energy/)
+# [Личный проект «Кэт энерджи»](https://dmitriy-rassol.github.io/Cat-Energy/build/)
 
 ### Памятка
 
