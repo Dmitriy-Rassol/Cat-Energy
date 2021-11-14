@@ -1,0 +1,162 @@
+.main-nav {
+  display: block;
+
+  &--opened {
+    height: 197px;
+    transition: height 0.4s, opacity 0.6s  ease-in-out;
+    opacity: 1;
+  }
+
+  &--closed {
+    height: 0;
+    transition: height 0.4s, opacity 0.1s ease-in-out;
+    opacity: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -20px;
+  }
+
+  &__item {
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    border-top: 1px solid $grey5;
+  }
+
+  &__link {
+    position: relative;
+    color: $black;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &__link:hover {
+    opacity: 0.6;
+  }
+
+  &__link:focus {
+    opacity: 0.6;
+  }
+
+  &__link:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__item--active {
+  cursor: pointer;
+
+  .main-nav__link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    background-color: $green;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    height: auto;
+    opacity: 1;
+    min-width: 420px;
+    padding-right: 0;
+    margin-top: -17px;
+
+    &--closed {
+      display: block;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-right: 0;
+    }
+
+    &__item {
+      border: 0;
+      font-size: 18px;
+      line-height: 25px;
+      margin: 0 0 0 35px;
+    }
+
+    &__item:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    min-width: 458px;
+    padding-right: 0;
+
+    &__item {
+      border: 0;
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0 0 0 34px;
+    }
+
+    &__item:first-child {
+      margin-left: 0;
+    }
+
+    &__list--index &__link {
+      position: relative;
+      color: $white;
+      text-decoration: none;
+      outline: none;
+    }
+
+    &__list--index &__link:hover {
+      opacity: 0.6;
+    }
+
+    &__list--index &__link:focus {
+      opacity: 0.6;
+    }
+
+    &__list--index &__link:active {
+      opacity: 0.3;
+    }
+
+    &__list--index &__item--active {
+      cursor: pointer;
+
+      .main-nav__link::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+      }
+    }
+  }
+
+  .main-nav__item--active {
+    cursor: pointer;
+
+    .main-nav__link::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 2px;
+      background-color: $green;
+    }
+  }
+}

@@ -1,0 +1,234 @@
+.add-list {
+  padding: 0;
+  list-style: none;
+  margin: 14px 0 0;
+
+  &__item {
+    margin-bottom: 13px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__input:checked + &__label::before {
+    background-image: url("../img/icon-tick.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: $black1;
+    padding-left: 45px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__label:active {
+    opacity: 0.3;
+  }
+
+  &__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey2;
+  }
+
+  &__label:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey15;
+  }
+
+  &__label:focus::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $grey15;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .add-list {
+    padding: 0;
+    list-style: none;
+    margin: -5px 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__item {
+      margin-bottom: 36px;
+      width: 50%;
+    }
+
+    &__item:nth-child(2n) {
+      margin-bottom: 34px;
+      padding-left: 30px;
+      width: 50%;
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &__input:checked + &__label::before {
+      background-image: url("../img/icon-tick.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+    }
+
+    &__label {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $black1;
+      padding-left: 58px;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &__label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey2;
+    }
+
+    &__label:hover::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey15;
+    }
+
+    &__label:focus::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey15;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-list {
+    padding: 0;
+    list-style: none;
+    margin: -7px 0 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &__item {
+      margin-bottom: 34px;
+      margin-right: 79px;
+      width: 245px;
+    }
+
+    &__item:nth-of-type(4) {
+      margin-bottom: 34px;
+      margin-right: 0;
+      width: 245px;
+    }
+
+    &__item:nth-child(2n) {
+      margin-bottom: 34px;
+      padding-left: 0;
+      width: 245px;
+    }
+
+    &__input:checked + &__label::before {
+      background-image: url("../img/icon-tick.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+    }
+
+    &__label {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $black1;
+      padding-left: 59px;
+      padding-top: 10px;
+      padding-bottom: 8px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    &__label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey2;
+    }
+
+    &__label:hover::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey15;
+    }
+
+    &__label:focus::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $grey15;
+    }
+  }
+}

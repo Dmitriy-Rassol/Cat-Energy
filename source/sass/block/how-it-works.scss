@@ -1,0 +1,226 @@
+.how-it-works {
+  padding-bottom: 22px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 300;
+    color: $black1;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      background: $green;
+    }
+
+    &-text {
+      font-family: $arial-font;
+      width: calc(100% - 80px);
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &-text br {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .how-it-works {
+    padding-top: 16px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      color: $black1;
+      margin-top: 0;
+      margin-bottom: 52px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: calc(50% - 105px);
+      padding-bottom: 24px;
+      background-repeat: no-repeat;
+      position: relative;
+      margin-right: 75px;
+      margin-top: 20px;
+      margin-bottom: 89px;
+
+      &--food::before {
+        content: "1";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: 19px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &--fast::before {
+        content: "2";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: 2px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &--meal::before {
+        content: "3";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: 2px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &--result::before {
+        content: "4";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: -2px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &-illustration {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 32px;
+        margin-right: calc(100% - 80px);
+      }
+
+      &-text {
+        width: 250px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &-text br {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .how-it-works {
+    padding-top: 18px;
+    padding-bottom: 0;
+    margin-bottom: -16px;
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      color: $black1;
+      margin-top: 40px;
+      margin-bottom: 52px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 245px;
+      padding-bottom: 24px;
+      background-repeat: no-repeat;
+      position: relative;
+      margin-right: 0;
+      margin-top: 20px;
+      margin-bottom: 64px;
+
+      &--food::before {
+        content: "1";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: 16px;
+        top: -61px;
+        z-index: -10;
+      }
+
+      &--fast::before {
+        content: "2";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: 0;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &--meal::before {
+        content: "3";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: -3px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &--result::before {
+        content: "4";
+        position: absolute;
+        color: $grey4;
+        font-size: 281px;
+        right: -5px;
+        top: -60px;
+        z-index: -10;
+      }
+
+      &-illustration {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 32px;
+        margin-right: calc(100% - 80px);
+      }
+
+      &-text {
+        width: 250px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}

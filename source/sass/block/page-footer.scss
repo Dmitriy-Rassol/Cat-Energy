@@ -1,0 +1,241 @@
+.page-footer {
+  background: $grey4;
+  padding: 36px 0 23px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo-link {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    outline: none;
+  }
+
+  &__logo-link:hover,
+  &__logo-link:focus {
+    opacity: 0.8;
+  }
+
+  &__logo-link:active {
+    opacity: 0.6;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+  }
+
+  &__academy-link {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    outline: none;
+  }
+
+  &__academy-link:active {
+    opacity: 0.3;
+  }
+
+  &__academy-text {
+    font-family: $arial-font;
+    font-size: 16px;
+    line-height: 16px;
+    color: $icon;
+    font-weight: 300;
+  }
+
+  &__academy-icon {
+    fill: $icon;
+    margin-top: 4px;
+  }
+
+  &__academy-link:hover &__academy-icon,
+  &__academy-link:focus &__academy-icon {
+    fill: $green;
+  }
+}
+
+.social-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 55px;
+  }
+
+  &__link {
+    fill: $icon;
+    outline: none;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    fill: $green;
+  }
+
+  &__link:active {
+    fill: $green;
+    opacity: 0.3;
+  }
+
+  &__icon--vk {
+    transform: translate(-4px, -4px);
+  }
+
+  &__icon--fb {
+    transform: translate(0, -2px);
+  }
+
+  &__icon--inst {
+    transform: translate(-1px, -1px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    background: $grey4;
+    padding-top: 57px;
+    padding-bottom: 55px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__logo-link {
+      display: flex;
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: 0;
+      outline: none;
+      margin-top: 6px;
+      width: 22.5%;
+    }
+
+    &__logo-link:hover,
+    &__logo-link:focus {
+      opacity: 0.8;
+    }
+
+    &__logo-link:active {
+      opacity: 0.6;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: center;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      border: none;
+      width: 54.5%;
+      padding-left: 30px;
+    }
+
+    &__academy {
+      width: 23%;
+      margin-top: -4px;
+    }
+
+    &__academy-link {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      text-decoration: none;
+      align-items: center;
+      outline: none;
+    }
+
+    &__academy-text {
+      font-size: 16px;
+      line-height: 16px;
+      color: $icon;
+      font-weight: 300;
+      font-family: $arial-font;
+    }
+
+    &__academy-icon {
+      fill: $icon;
+      margin-top: 4px;
+    }
+
+    &__academy-link:hover &__academy-icon,
+    &__academy-link:focus &__academy-icon {
+      fill: $green;
+    }
+  }
+
+  .social-list {
+    &__item {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 55px;
+    }
+
+    &__icon {
+      &--vk {
+        width: 30px;
+        height: 16px;
+        transform: translate(0, -1px);
+      }
+
+      &--inst {
+        width: 23px;
+        height: 23px;
+        transform: translate(2px, -1px);
+      }
+
+      &--fb {
+        width: 14px;
+        height: 28px;
+        transform: translate(0, -1px);
+      }
+    }
+
+    &__link {
+      fill: $icon;
+      outline: none;
+    }
+
+    &__link:hover,
+    &__link:focus {
+      fill: $green;
+    }
+
+    &__link:active {
+      fill: $green;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+
+    &__logo-link {
+      margin-top: 10px;
+    }
+
+    &__academy {
+      width: 23%;
+      padding-left: 118px;
+      margin-top: 0;
+    }
+  }
+}

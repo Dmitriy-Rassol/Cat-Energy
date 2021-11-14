@@ -1,0 +1,124 @@
+.add-product {
+  padding-top: 13px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid $grey;
+
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $black1;
+    line-height: 16px;
+    margin-top: 0;
+    margin-bottom: 13px;
+  }
+
+  &__options {
+    font-family: $arial-font;
+    font-size: 14px;
+    line-height: 14px;
+    width: 100%;
+    margin-bottom: 13px;
+    border-spacing: 0;
+  }
+
+  &__options-cell {
+    padding: 2px 0;
+
+    &--quantity {
+      text-align: left;
+    }
+
+    &--price {
+      text-align: right;
+    }
+  }
+
+  &__button {
+    padding-top: 11px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .add-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px 36px 27px;
+
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+      width: 30%;
+      margin-bottom: 26px;
+    }
+
+    &__options {
+      font-size: 16px;
+      line-height: 20px;
+      width: 40%;
+      margin-top: 2px;
+    }
+
+    &__options-cell--quantity {
+      text-align: right;
+    }
+
+    &__options-cell--price {
+      width: 95px;
+    }
+
+    &__button {
+      width: 100%;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+
+  .add-product:last-child {
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0 16px;
+
+    &__title {
+      width: 245px;
+      margin: 0 81px 0 0;
+      align-self: center;
+      justify-content: flex-start;
+    }
+
+    &__options {
+      width: 288px;
+      margin-right: 36px;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+
+    &__options-cell--quantity {
+      text-align: left;
+    }
+
+    &__options-cell--price {
+      text-align: left;
+      width: 47px;
+    }
+
+    &__button {
+      width: 245px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+    }
+  }
+
+  .add-product:last-child {
+    border: none;
+  }
+}

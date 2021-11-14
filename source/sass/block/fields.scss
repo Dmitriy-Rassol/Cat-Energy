@@ -1,0 +1,675 @@
+.fields {
+  padding-top: 40px;
+  padding-bottom: 33px;
+
+  &__set {
+    &--personal {
+      padding-bottom: 8px;
+    }
+
+    &--program {
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 1px solid $grey2;
+    }
+
+    &--contacts {
+      margin-top: 0;
+    }
+
+    &--description {
+      margin-top: -14px;
+    }
+
+    &--add {
+      margin-top: -2px;
+      padding-bottom: 21px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 300;
+    color: $black1;
+    margin: 0;
+    background-color: $white;
+  }
+
+  &__title::before {
+    content: "";
+    z-index: -1;
+    width: 100vw;
+    height: 3px;
+    position: absolute;
+    background-color: $green;
+  }
+
+  &__title--contacts {
+    width: 200px;
+    padding-top: 30px;
+    padding-bottom: 19px;
+  }
+
+  &__title--contacts::before {
+    top: 43px;
+  }
+
+  &__title--description {
+    width: 142px;
+    padding-top: 28px;
+    padding-bottom: 20px;
+  }
+
+  &__title--description::before {
+    top: 41px;
+  }
+
+  &__title--add {
+    width: 164px;
+    margin-top: 10px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  &__title--add::before {
+    top: 31px;
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $black1;
+    white-space: nowrap;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 12px;
+    border: 1px solid $grey5;
+    outline: 0;
+    margin-left: 15px;
+  }
+
+  &__input::placeholder {
+    color: $grey-dark;
+  }
+
+  &__input::-moz-placeholder {
+    color: $black;
+  }
+
+  &__input:hover {
+    border: 1px solid $grey;
+  }
+
+  &__input:focus {
+    border: 2px solid $grey-dark;
+    padding: 11px 14px 11px 11px;
+  }
+
+  &__input:invalid {
+    border: 2px solid $error;
+    padding: 11px 14px 11px 11px;
+  }
+
+  &__input:invalid:not(:focus) {
+    border: 1px solid  $grey5;
+    padding: 12px;
+  }
+
+  &__input:invalid:not(:focus):hover {
+    border: 1px solid $grey;
+    padding: 12px;
+  }
+
+  &__inner {
+    margin-top: 14px;
+  }
+
+  &__textarea {
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid $grey5;
+    outline: 0;
+    width: 100%;
+    height: 150px;
+    padding: 12px 10px 12px 15px;
+    margin-top: 14px;
+    resize: none;
+  }
+
+  &__textarea::placeholder {
+    color: $grey-dark;
+  }
+
+  &__textarea::-moz-placeholder {
+    color: $black;
+  }
+
+  &__textarea:hover {
+    border: 1px solid $grey;
+  }
+
+  &__textarea:focus {
+    border: 2px solid $grey-dark;
+    padding: 11px 14px;
+  }
+
+  &__icon {
+    position: absolute;
+
+    &--mail {
+      right: 16px;
+      top: 15px;
+    }
+
+    &--phone {
+      right: 13px;
+      top: 12px;
+    }
+  }
+
+  &__input:focus + &__icon {
+    fill: $green;
+  }
+
+  &__input:invalid + &__icon {
+    fill: $error;
+  }
+
+  &__input:invalid:not(:focus) + &__icon {
+    fill: $black2;
+  }
+
+  &__button-block {
+    text-align: center;
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 17px;
+    padding-top: 11px;
+    padding-bottom: 12px;
+  }
+
+  &__note {
+    font-family: $arial-font;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.fields__input::-webkit-outer-spin-button,
+.fields__input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+@media (min-width: $tablet-width) {
+  .fields {
+    margin: 27px 40px 39px;
+
+    &__wrapper {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &__set {
+      &--personal {
+        padding-bottom: 79px;
+      }
+
+      &--program {
+        padding-left: 28px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &--contacts {
+        margin-top: 0;
+      }
+
+      &--add {
+        margin-top: -13px;
+        padding-bottom: 24px;
+      }
+
+      &--description {
+        padding-top: 0;
+      }
+    }
+
+    &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 36px;
+      line-height: 36px;
+      padding: 66px 40px 62px;
+      margin: 0 40px 0 -40px;
+    }
+
+    &__title::before {
+      height: 3px;
+      position: absolute;
+      background-color: $green;
+    }
+
+    &__title--contacts {
+      width: 592px;
+      margin-top: 0;
+      padding-top: 76px;
+      padding-bottom: 62px;
+    }
+
+    &__title--contacts::before {
+      top: 96px;
+      left: -30px;
+    }
+
+    &__title--description {
+      width: 258px;
+      margin-top: 20px;
+      padding-top: 55px;
+      padding-bottom: 60px;
+    }
+
+    &__title--description::before {
+      top: 76px;
+      left: -30px;
+    }
+
+    &__title--add {
+      width: 292px;
+      margin-top: 20px;
+      padding-top: 55px;
+      padding-bottom: 61px;
+    }
+
+    &__title--add::before {
+      top: 77px;
+      left: -30px;
+    }
+
+    &__block {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    &__block:nth-last-child(1) {
+      margin-bottom: -16px;
+    }
+
+    &__label {
+      font-size: 20px;
+      line-height: 20px;
+      padding-bottom: 10px;
+    }
+
+    &__input {
+      font-size: 20px;
+      padding: 14px 17px;
+      margin-left: 17px;
+      margin-bottom: 5px;
+    }
+
+    &__input::placeholder {
+      color: $grey-dark;
+    }
+
+    &__input::-moz-placeholder {
+      color: $black;
+    }
+
+    &__input:hover {
+      border: 1px solid $grey;
+    }
+
+    &__input:focus {
+      border: 2px solid $grey-dark;
+      padding: 13px 16px;
+    }
+
+    &__input:invalid {
+      border: 2px solid $error;
+      padding: 13px 16px;
+    }
+
+    &__input:invalid:not(:focus) {
+      border: 1px solid  $grey5;
+      padding: 14px 17px;
+    }
+
+    &__input:invalid:not(:focus):hover {
+      border: 1px solid $grey;
+      padding: 14px 17px;
+    }
+
+    &__inner {
+      margin-top: 14px;
+    }
+
+    &__textarea {
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+      border: 1px solid $grey5;
+      outline: 0;
+      width: 100%;
+      height: 175px;
+      padding: 11px 20px;
+      margin-top: 15px;
+      margin-bottom: 2px;
+      resize: none;
+    }
+
+    &__textarea::placeholder {
+      color: $grey-dark;
+    }
+
+    &__textarea::-moz-placeholder {
+      color: $black;
+    }
+
+    &__textarea:hover {
+      border: 1px solid $grey;
+    }
+
+    &__textarea:focus {
+      border: 2px solid $grey-dark;
+      padding: 10px 19px;
+    }
+
+    &__textarea:invalid {
+      border: 2px solid $error;
+      padding: 10px 19px;
+    }
+
+    &__icon {
+      position: absolute;
+
+      &--mail {
+        right: 21px;
+        top: 20px;
+      }
+
+      &--phone {
+        right: 14px;
+        top: 18px;
+      }
+    }
+
+    &__button-block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__button {
+      width: calc(50% - 30px);
+      margin-bottom: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-right: 30px;
+    }
+
+    &__note {
+      font-family: $arial-font;
+      font-size: 16px;
+      line-height: 16px;
+      width: calc(50% - 30px);
+      margin-left: 30px;
+      margin-top: -9px;
+      align-self: center;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .fields {
+    margin: 26px 0 48px;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 11px;
+    }
+
+    &__set {
+      &--personal {
+        padding-bottom: 0;
+        width: 570px;
+      }
+
+      &--program {
+        width: 570px;
+        padding-left: 28px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &--contacts {
+        width: 100%;
+      }
+
+      &--add {
+        padding-bottom: 30px;
+        width: 100%;
+      }
+
+      &--description {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 36px;
+      line-height: 36px;
+      max-width: 100%;
+      padding-right: 40px;
+      padding-left: 40px;
+      margin: 0 40px 0 -40px;
+    }
+
+    &__title::before {
+      width: 150vw;
+      height: 3px;
+      position: absolute;
+      background-color: $green;
+    }
+
+    &__title--contacts {
+      width: 592px;
+      margin-top: 0;
+      padding-top: 65px;
+      padding-bottom: 63px;
+    }
+
+    &__title--contacts::before {
+      top: 86px;
+      left: -50vw;
+    }
+
+    &__title--description {
+      width: 258px;
+      margin-top: 0;
+      padding-top: 61px;
+      padding-bottom: 62px;
+    }
+
+    &__title--description::before {
+      top: 83px;
+      left: -50vw;
+    }
+
+    &__title--add {
+      width: 292px;
+      margin-top: 20px;
+      padding-top: 57px;
+      padding-bottom: 63px;
+    }
+
+    &__title--add::before {
+      top: 79px;
+      left: -50vw;
+    }
+
+    &__block {
+      position: relative;
+      align-items: center;
+      width: 570px;
+      margin-bottom: 15px;
+    }
+
+    &__block:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &__label {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 6px;
+    }
+
+    &__input {
+      font-size: 20px;
+      padding: 14px 18px;
+      margin-left: 17px;
+      margin-bottom: 5px;
+      color: $grey-dark;
+    }
+
+    &__input::placeholder {
+      color: $grey-dark;
+    }
+
+    &__input::-moz-placeholder {
+      color: $black;
+    }
+
+    &__input:hover {
+      border: 1px solid $grey;
+    }
+
+    &__input:focus {
+      border: 2px solid $grey-dark;
+      padding: 13px 17px;
+    }
+
+    &__input:invalid {
+      border: 2px solid  $error;
+      padding: 13px 17px;
+    }
+
+    &__input:invalid:not(:focus) {
+      border: 1px solid  $grey5;
+      padding: 14px 18px;
+    }
+
+    &__input:invalid:not(:focus):hover {
+      border: 1px solid $grey;
+      padding: 14px 18px;
+    }
+
+    &__textarea {
+      font-size: 20px;
+      line-height: 30px;
+      text-transform: uppercase;
+      border: 1px solid $grey5;
+      outline: 0;
+      width: 100%;
+      height: 175px;
+      padding: 8px 18px;
+      margin-top: 14px;
+      resize: none;
+    }
+
+    &__textarea::placeholder {
+      color: $grey-dark;
+    }
+
+    &__textarea::-moz-placeholder {
+      color: $black;
+    }
+
+    &__textarea:hover {
+      border: 1px solid $grey;
+    }
+
+    &__textarea:focus {
+      border: 2px solid $grey-dark;
+      padding: 7px 17px;
+    }
+
+    &__textarea:invalid {
+      border: 2px solid $error;
+      padding: 7px 17px;
+    }
+
+    &__icon {
+      position: absolute;
+
+      &--mail {
+        right: 21px;
+        top: 20px;
+      }
+
+      &--phone {
+        right: 14px;
+        top: 18px;
+      }
+    }
+
+    &__button-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__button {
+      width: calc(50% - 40px);
+      margin-bottom: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-right: 30px;
+    }
+
+    &__note {
+      font-family: $arial-font;
+      font-size: 16px;
+      line-height: 16px;
+      width: calc(50% - 40px);
+      margin-left: 30px;
+      align-self: center;
+      text-align: left;
+    }
+  }
+}
